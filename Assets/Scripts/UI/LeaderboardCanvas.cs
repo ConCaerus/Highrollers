@@ -45,6 +45,10 @@ public class LeaderboardCanvas : Singleton<LeaderboardCanvas> {
         var data = SaveData.getString(slotSaveTag + (slots.Count - 1).ToString(), "");
         return string.IsNullOrEmpty(data) ? -1 : JsonUtility.FromJson<LeaderboardPlayerInfo>(data).score;
     }
+
+    public bool isScoreRelevant(float score) {
+        return score > getLowestBoardScore();
+    }
 }
 
 [System.Serializable]

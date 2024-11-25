@@ -2,7 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
-public class TextInputCanvas : Singleton<TextInputCanvas> {
+public class NameInputCanvas : Singleton<NameInputCanvas> {
     [SerializeField] TextMeshProUGUI nameText;
     [SerializeField] Transform background;
     [SerializeField] int maxNameLength;
@@ -54,8 +54,6 @@ public class TextInputCanvas : Singleton<TextInputCanvas> {
                 }
             }
         }
-        if(Input.GetKeyDown(KeyCode.U))
-            show();
     }
 
     public void show() {
