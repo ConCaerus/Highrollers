@@ -6,11 +6,10 @@ public class PauseMenu : MonoBehaviour
     [Header("Pause Menu UI")]
     public GameObject pauseMenuUI;
     private bool isPaused = false;
-    public GameObject OptionsCanvas; // Reference to the OptionsCanvas
+    public GameObject OptionsCanvas;
 
     public void ShowOptionsMenu()
     {
-        // Enable OptionsCanvas and hide PauseMenuCanvas
         OptionsCanvas.SetActive(true);
         pauseMenuUI.SetActive(false);
     }
