@@ -4,10 +4,10 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     // Starts the Game Scene
-    void PlayGame()
+    public void PlayGame()
     {
         Debug.Log("Start Game");
-        //SceneManager.LoadScene();
+        SceneManager.LoadScene("Game");
     }
 
     // Quits Game
