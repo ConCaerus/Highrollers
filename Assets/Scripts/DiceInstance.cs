@@ -61,7 +61,12 @@ public class DiceInstance : MonoBehaviour {
         curState = dieState.Idle;
     }
     public void toggleState() {
-        curState = curState == dieState.Chosen ? dieState.Idle : dieState.Chosen;
+        if(curState != dieState.Chosen) {
+            if(GameManager.I.canChooseDie())
+                curState = dieState.Chosen;
+        }
+        else
+            curState = dieState.Idle;
     }
     public void setChosen() {
         curState = dieState.Chosen;

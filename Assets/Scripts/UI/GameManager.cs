@@ -10,6 +10,7 @@ public class GameManager : Singleton<GameManager> {
 
     [SerializeField] GameObject buttons1, buttons2, rerollText;
     [SerializeField] Button rerollButton;
+    [SerializeField] int maxRerollCount;
 
     [HideInInspector] public int result;
 
@@ -78,5 +79,16 @@ public class GameManager : Singleton<GameManager> {
         rerollButton.interactable = !hasRerolled;
         hasRerolled = true;
         scoreShower = null;
+    }
+
+    public bool canChooseDie() {
+        var cCount = 0;
+        foreach(var i in dice) {
+            if(i.curState == DiceInstance.dieState.Chosen) {
+                cCount++;
+                if(cCount >= maxRerollCount) return false;
+            }
+        }
+        return true;
     }
 }

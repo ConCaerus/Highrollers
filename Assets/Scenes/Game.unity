@@ -4376,6 +4376,7 @@ MonoBehaviour:
   buttons2: {fileID: 1818801089}
   rerollText: {fileID: 618931039}
   rerollButton: {fileID: 1023059334}
+  maxRerollCount: 2
   result: 0
 --- !u!1 &2097729832
 GameObject:
