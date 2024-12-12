@@ -41,12 +41,12 @@ public class LeaderboardCanvas : Singleton<LeaderboardCanvas> {
         background.gameObject.SetActive(false);
     }
 
-    public float getLowestBoardScore() {
+    public int getLowestBoardScore() {
         var data = SaveData.getString(slotSaveTag + (slots.Count - 1).ToString(), "");
         return string.IsNullOrEmpty(data) ? -1 : JsonUtility.FromJson<LeaderboardPlayerInfo>(data).score;
     }
 
-    public bool isScoreRelevant(float score) {
+    public bool isScoreRelevant(int score) {
         return score > getLowestBoardScore();
     }
 }
@@ -54,9 +54,9 @@ public class LeaderboardCanvas : Singleton<LeaderboardCanvas> {
 [System.Serializable]
 public class LeaderboardPlayerInfo {
     public string username;
-    public float score;
+    public int score;
 
-    public LeaderboardPlayerInfo(string n, float s) {
+    public LeaderboardPlayerInfo(string n, int s) {
         username = n;
         score = s;
     }

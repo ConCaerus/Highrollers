@@ -8,6 +8,6 @@ public class LeaderboardSlotInstance : MonoBehaviour {
     public void setup(LeaderboardPlayerInfo info) {
         reference = info;
         nameText.text = info.username;
-        scoreText.text = info.score.ToString("0.00");
+        scoreText.text = info.score.ToString("0");
     }
 }

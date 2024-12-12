@@ -10,8 +10,6 @@ public class NameInputCanvas : Singleton<NameInputCanvas> {
 
     Coroutine anim = null;
 
-    [SerializeField] float tempScore;
-
     bool s = false;
     bool shown {
         get { return s; }
@@ -42,7 +40,7 @@ public class NameInputCanvas : Singleton<NameInputCanvas> {
             }
             else if(Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)) {
                 if(input.Length == 0) return;
-                LeaderboardCanvas.I.addNewInfo(new LeaderboardPlayerInfo(endInput(), tempScore));
+                LeaderboardCanvas.I.addNewInfo(new LeaderboardPlayerInfo(endInput(), GameManager.I.result));
                 LeaderboardCanvas.I.show();
             }
             else if(input.Length < maxNameLength) {
