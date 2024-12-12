@@ -1182,7 +1182,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 799126432}
         m_TargetAssemblyTypeName: DiceInstance, Assembly-CSharp
-        m_MethodName: setChosen
+        m_MethodName: toggleState
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1671,7 +1671,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1026760548}
         m_TargetAssemblyTypeName: DiceInstance, Assembly-CSharp
-        m_MethodName: setChosen
+        m_MethodName: toggleState
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1988,7 +1988,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1050505455}
         m_TargetAssemblyTypeName: DiceInstance, Assembly-CSharp
-        m_MethodName: setChosen
+        m_MethodName: toggleState
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2270,7 +2270,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1120905839}
         m_TargetAssemblyTypeName: DiceInstance, Assembly-CSharp
-        m_MethodName: setChosen
+        m_MethodName: toggleState
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3124,7 +3124,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1424898939}
         m_TargetAssemblyTypeName: DiceInstance, Assembly-CSharp
-        m_MethodName: setChosen
+        m_MethodName: toggleState
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

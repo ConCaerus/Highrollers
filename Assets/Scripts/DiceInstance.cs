@@ -60,6 +60,9 @@ public class DiceInstance : MonoBehaviour {
     public void setIdle() {
         curState = dieState.Idle;
     }
+    public void toggleState() {
+        curState = curState == dieState.Chosen ? dieState.Idle : dieState.Chosen;
+    }
     public void setChosen() {
         curState = dieState.Chosen;
     }
