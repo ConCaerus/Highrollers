@@ -19,10 +19,7 @@ public class GameManager : Singleton<GameManager> {
     bool hasRerolled = false;
 
     private void Start() {
-        score.text = "Test Your Luck!";
-        rerollText.SetActive(false);
-        buttons1.SetActive(true);
-        buttons2.SetActive(false);
+        reset();
     }
 
     //  buttons
@@ -45,6 +42,7 @@ public class GameManager : Singleton<GameManager> {
             result += i.roll();
             if(i.curState == DiceInstance.dieState.Chosen && i.getDelay() > showTime)
                 showTime = i.getDelay();
+            i.GetComponent<Button>().interactable = true;
         }
         scoreShower = StartCoroutine(showScore(showTime + .5f));
     }
@@ -66,7 +64,10 @@ public class GameManager : Singleton<GameManager> {
         hasRerolled = false;
         rerollButton.interactable = true;
 
-        foreach(var i in dice) i.setChosen();
+        foreach(var i in dice) {
+            i.setChosen();
+            i.GetComponent<Button>().interactable = false;
+        }
     }
 
     IEnumerator showScore(float scoreShowDelay) {
