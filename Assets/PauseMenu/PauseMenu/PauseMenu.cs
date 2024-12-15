@@ -6,11 +6,11 @@ public class PauseMenu : MonoBehaviour
     [Header("Pause Menu UI")]
     public GameObject pauseMenuUI;
     private bool isPaused = false;
-    public GameObject OptionsCanvas;
+    public GameObject optionsCanvas;
 
     public void ShowOptionsMenu()
     {
-        OptionsCanvas.SetActive(true);
+        optionsCanvas.SetActive(true);
         pauseMenuUI.SetActive(false);
     }
 
@@ -50,6 +50,7 @@ public class PauseMenu : MonoBehaviour
         if (pauseMenuUI != null)
         {
             pauseMenuUI.SetActive(false);
+            OptionsCanvas.I.hide();
         }
         else
         {
